@@ -11,10 +11,11 @@ elements:
   - type: image
     entity: sensor.heatpump_qc_supervisorycontrolmode
     state_image:
-      '0': /local/images/quatt/controlmode-0.png
+      '0': /local/images/quatt/blank-icon.png
       '1': /local/images/quatt/controlmode-1.png
       '2': /local/images/quatt/controlmode-2.png
       '3': /local/images/quatt/controlmode-3.png
+      '4': /local/images/quatt/controlmode-4.png
       '98': /local/images/quatt/controlmode-98.png
       '99': /local/images/quatt/controlmode-99.png
     style:
@@ -51,6 +52,7 @@ elements:
     entity: sensor.quatt_working
     state_image:
       'True': /local/images/quatt/working.svg
+      'False': /local/images/quatt/blank-icon.png
     style:
       top: 76%
       left: 78%
@@ -75,6 +77,12 @@ elements:
       left: 94%
       width: 7%
 # Different tempature sensors in the image.
+  - type: state-label
+    entity: sensor.heatpump_flowmeter_temperature
+    style:
+      top: 55%
+      left: 23%
+      color: white
   - type: state-label
     entity: sensor.heatpump_hp1_temperatureoutside
     style:
